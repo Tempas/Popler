@@ -23,7 +23,6 @@
         android:textSize="40sp"
         android:text="popler"
         android:textColor="@color/colorPrimary"
-        android:layout_marginTop="15dp"
         android:layout_toEndOf="@id/icon_image" />
 
     <TextView android:id="@+id/app_subtitle"
