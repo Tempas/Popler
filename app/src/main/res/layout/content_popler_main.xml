@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.popler.ryan.popler.PoplerMain">
+
+    <ImageView android:id="@+id/icon_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/popler_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="popler"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/icon_image" />
+
+    <TextView android:id="@+id/app_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_title"
+        android:layout_toEndOf="@id/icon_image"
+        android:textSize="15sp"
+        android:text="How many people are around you?"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="0dp"/>
+    
+    <RelativeLayout android:id="@+id/demographic_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/app_subtitle"
+        android:layout_centerHorizontal="true">
+        
+        <RelativeLayout android:id="@+id/male_layout"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginRight="70dp">
+
+            <ImageView android:id="@+id/male_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/male_icon"
+                android:tintMode="src_atop"
+                android:tint="@color/maleColor"/>
+
+            <TextView android:id="@+id/male_count_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/maleColor"
+                android:layout_alignParentBottom="true"
+                android:textSize="20sp"
+                android:maxLines="2"
+                android:textColor="@color/whiteColor"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/female_layout"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_toEndOf="@id/male_layout">
+
+            <ImageView android:id="@+id/female_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/female_icon"
+                android:tintMode="src_atop"
+                android:tint="@color/femaleColor"/>
+
+            <TextView android:id="@+id/female_count_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/femaleColor"
+                android:layout_alignParentBottom="true"
+                android:textSize="20sp"
+                android:maxLines="2"
+                android:textColor="@color/whiteColor"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/location_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView android:id="@+id/location_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/lightBrownColor"
+            android:src="@drawable/location_icon"/>
+
+        <TextView android:id="@+id/location_title"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/location_icon"
+            android:textColor="@color/lightBrownColor"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/demographic_layout"
+        android:layout_above="@id/location_layout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/circle_image"
+            android:tint="@color/colorPrimary"/>
+
+        <TextView android:id="@+id/total_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/whiteColor"
+            android:textSize="45sp"
+            android:maxLines="2"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+</RelativeLayout>
